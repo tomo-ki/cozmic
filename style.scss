@@ -14,6 +14,9 @@ $sm: 440px;
 a{
   text-decoration: none;
   color: #5f6c7b;
+  &:hover{
+    opacity: 0.5;
+  }
 }
 li{
   list-style: none;
@@ -61,10 +64,16 @@ h2{
   transform: translateY(5px);
 }
 
+
+$z: 1,2,3,4,5,6,7,8,9,10;
+
+// header
 .header{
   justify-content: center;
 }
 
+
+// topnav
 .topnav{
   background-color: #094067;
     padding: 0 40px;
@@ -74,6 +83,7 @@ h2{
     width: 100%;
     position: fixed;
     top: 0;
+    z-index: index($z,10);
     &__list{
       &-link{
         color: #fffffe;
@@ -85,7 +95,7 @@ h2{
 
 
 .firstview{
-  justify-content: center;
+  align-items: center;
   background: url(./images/firstview.jpg) no-repeat center;
   min-height: 100vh;
   background-size: cover;
@@ -117,7 +127,6 @@ h2{
 }
 
 
-$z-greeting: 1,2,3,4;
 .greeting{
   margin-top: 100vh;
   align-items: center;
@@ -130,7 +139,7 @@ $z-greeting: 1,2,3,4;
     background-color: #EEEEEE;
     padding: 20px;
     margin-left: 5%;
-    z-index: index($z-greeting,3);
+    z-index: index($z,3);
   }
   &__logo{
 
@@ -152,7 +161,7 @@ $z-greeting: 1,2,3,4;
     position: absolute;
     top: 10%;
     right: 5%;
-    z-index: index($z-greeting,1);
+    z-index: index($z,1);
   }
   &__int{
     color:#094067;
@@ -161,7 +170,7 @@ $z-greeting: 1,2,3,4;
     position: absolute;
     top: 73%;
     right: 10%;
-    z-index: index($z-greeting,2);
+    z-index: index($z,2);
   }
 }
 
@@ -218,7 +227,7 @@ $z-greeting: 1,2,3,4;
   &__card-wrapper{
     min-width: 100%;
     width: min-content;
-    animation: 3s linear infinite sliderAnimation;
+    animation: 10s linear infinite sliderAnimation;
     margin: 30px 0;
   }
   &__card{
