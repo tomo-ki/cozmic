@@ -31,3 +31,38 @@ $(function(){
     ]
   });
 });
+
+$(function() {
+  var $win = $(window),
+      $main = $('main'),
+      $nav = $('nav'),
+      navHeight = $nav.outerHeight(),
+      navPos = $nav.offset().top,
+      fixedClass = 'is-fixed';
+
+  $win.on('load scroll', function() {
+    var value = $(this).scrollTop();
+    if ( value > navPos ) {
+      $nav.addClass(fixedClass);
+      $main.css('margin-top', navHeight);
+    } else {
+      $nav.removeClass(fixedClass);
+      $main.css('margin-top', '0');
+    }
+  });
+});
+
+$(function(){
+  var imgHeight = $('.firstview').outerHeight(); //画像の高さを取得。これがイベント発火位置になる。
+  var header = $('.topnav'); //ヘッダーコンテンツ
+
+  $(window).on('load scroll', function(){
+    if ($(window).scrollTop() < imgHeight) {
+       //メインビジュアル内にいるので、クラスを外す。
+      header.removeClass('topnav__after');
+    }else {
+       //メインビジュアルより下までスクロールしたので、クラスを付けて色を変える
+      header.addClass('topnav__after');
+    }
+  });
+});
