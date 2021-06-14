@@ -42,7 +42,7 @@ h2{
 }
 
 .button {
-  width: 15%;
+  width: 25%;
   height: 45px;
   font-size: 14px;
   text-transform: uppercase;
@@ -103,7 +103,7 @@ $z: 1,2,3,4,5,6,7,8,9,10;
   top: 0;
   width: 100%;
   &__comment{
-    margin-top: 10%;
+    margin-top: 20vh;
     text-align: center;
     color: #fffffe;
     font-size: 48px;
@@ -203,39 +203,24 @@ $z: 1,2,3,4,5,6,7,8,9,10;
   }
 }
 
-	
-
-@keyframes sliderAnimation {
-  100% {
-    transform: translateX(-50%);
-  }
-}
 
 .achievement{
   padding: 70px 0;
-  justify-content: center;
   background-color: #11619a;
   color: #fffffe;
   text-align: center;
   &-wrapper{
-    display: -ms-grid;
-    -ms-grid-columns: min-content;
-    overflow: hidden;
     padding: 30px 0;
-    align-items: center;
   }
   &__card-wrapper{
-    min-width: 100%;
-    width: min-content;
-    animation: 10s linear infinite sliderAnimation;
-    margin: 30px 0;
+    margin: 70px 0;
   }
   &__card{
-    width: 230px;
+    height: 400px;
     background-color: #fffffe;
     border-radius: 10px;
-    margin: 30px 30px;
     position: relative;
+    margin: 0 30px;
     &-tag{
       color: #fffffe;
       background-color: #ef4565;
@@ -249,6 +234,7 @@ $z: 1,2,3,4,5,6,7,8,9,10;
     &-img{
       border-radius: 10px 10px 0 0;
       height:50%;
+      width: 100%;
     }
     &-textarea{
       color: #094067;
@@ -259,6 +245,9 @@ $z: 1,2,3,4,5,6,7,8,9,10;
     &-title{
       margin: 0 12px;
     }
+  }
+  &__button{
+    margin: 0 auto;
   }
 }
 

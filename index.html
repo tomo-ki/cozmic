@@ -5,12 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>株式会社コズミック</title>
+  <link href="css/slick.css" rel="stylesheet" />
+  <link href="css/slick-theme.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="style.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/scrolldown.css">
+  <script src="js/jquery-3.6.0.min.js"></script>
 </head>
 <body class="body">
   <header class="header flex">
-    <img src="" alt="コズミックロゴ" class="header__logo">
+    <img src="#" alt="コズミックロゴ" class="header__logo">
     <h1>株式会社 コズミック</h1>
   </header>
   <nav id="topnav" class="topnav flex">
@@ -24,10 +28,11 @@
   </nav>
   <div class="firstview flex-column">
     <h1 class="firstview__comment">
-      かっこいい一言
+      ユニークな一言
       <br>
       おれかおれ以外か。的な
     </h1>
+    <div class="scrolldown4"><span>Scroll</span></div>
   </div>
   <main class="main">
     <div class="greeting flex">
@@ -89,67 +94,69 @@
     <div>
       <h2>資格取得状況</h2>
     </div>
-    <div class="achievement flex">
+    <div class="achievement">
       <div class="achievement-wrapper flex-column">
         <h2 class="achievement__title">施工事例</h2>
         <p class="achievement__desc">こんなのがありますよ的な文章</p>
-        <div class="achievement__card-wrapper flex">
-          <a href="#" class="achievement__card flex-column">
-            <img src="images/firstview.jpg" alt="" class="achievement__card-img">
-            <div class="achievement__card-textarea">
-              <div class="achievement__card-tag">電気</div>
-              <h3 class="achievement__card-title">楽天の5Gのやつやりました1</h3>
-            </div>
-          </a>
-          <a href="#" class="achievement__card flex-column">
-            <img src="images/card1.jpg" alt="" class="achievement__card-img">
-            <!-- <div class="achievement__card-tagicon flex">
-              <img src="images/sensors_black_24dp.svg" alt="">
-            </div> -->
-            <div class="achievement__card-textarea">
-              <div class="achievement__card-tag">通信</div>
-              <h3 class="achievement__card-title">楽天の5Gのやつやりました2</h3>
-            </div>
-          </a>
-          <a href="#" class="achievement__card flex-column">
-            <img src="images/card2.jpg" alt="" class="achievement__card-img">
-            <!-- <div class="achievement__card-tagicon flex">
-              <img src="images/emoji_objects_black_24dp.svg" alt="">
-            </div> -->
-            <div class="achievement__card-textarea">
-              <div class="achievement__card-tag">電気</div>
-              <h3 class="achievement__card-title">楽天の5Gのやつやりました3</h3>
-            </div>
-          </a>
-          <a href="#" class="achievement__card flex-column">
-            <img src="images/card3.jpg" alt="" class="achievement__card-img">
-            <!-- <div class="achievement__card-tagicon flex">
-              <img src="images/emoji_objects_black_24dp.svg" alt="">
-            </div> -->
-            <div class="achievement__card-textarea">
-              <div class="achievement__card-tag">電気</div>
-              <h3 class="achievement__card-title">楽天の5Gのやつやりました4</h3>
-            </div>
-          </a>
-          <a href="#" class="achievement__card flex-column">
-            <img src="images/firstview.jpg" alt="" class="achievement__card-img">
-            <div class="achievement__card-textarea">
-              <div class="achievement__card-tag">電気</div>
-              <h3 class="achievement__card-title">楽天の5Gのやつやりました5</h3>
-            </div>
-          </a>
-          <a href="#" class="achievement__card flex-column">
-            <img src="images/card1.jpg" alt="" class="achievement__card-img">
-            <!-- <div class="achievement__card-tagicon flex">
-                        <img src="images/sensors_black_24dp.svg" alt="">
-                      </div> -->
-            <div class="achievement__card-textarea">
-              <div class="achievement__card-tag">通信</div>
-              <h3 class="achievement__card-title">楽天の5Gのやつやりました6</h3>
-            </div>
-          </a>
+        <ul class="achievement__card-wrapper flex">
+          <li>
+            <a href="#" class="achievement__card flex-column">
+              <img src="images/firstview.jpg" alt="" class="achievement__card-img">
+              <div class="achievement__card-textarea">
+                <div class="achievement__card-tag">電気</div>
+                <h3 class="achievement__card-title">楽天の5Gのやつやりました1</h3>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="achievement__card flex-column">
+              <img src="images/card1.jpg" alt="" class="achievement__card-img">
+              <div class="achievement__card-textarea">
+                <div class="achievement__card-tag">通信</div>
+                <h3 class="achievement__card-title">楽天の5Gのやつやりました2</h3>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="achievement__card flex-column">
+              <img src="images/card2.jpg" alt="" class="achievement__card-img">
+              <div class="achievement__card-textarea">
+                <div class="achievement__card-tag">電気</div>
+                <h3 class="achievement__card-title">ああああああああああああああああああああああああああああああ3</h3>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="achievement__card flex-column">
+              <img src="images/firstview.jpg" alt="" class="achievement__card-img">
+              <div class="achievement__card-textarea">
+                <div class="achievement__card-tag">電気</div>
+                <h3 class="achievement__card-title">楽天の5Gのやつやりました4</h3>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="achievement__card flex-column">
+              <img src="images/card1.jpg" alt="" class="achievement__card-img">
+              <div class="achievement__card-textarea">
+                <div class="achievement__card-tag">通信</div>
+                <h3 class="achievement__card-title">楽天の5Gのやつやりました5</h3>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="achievement__card flex-column">
+              <img src="images/card2.jpg" alt="" class="achievement__card-img">
+              <div class="achievement__card-textarea">
+                <div class="achievement__card-tag">電気</div>
+                <h3 class="achievement__card-title">ああああああああああああああああああああああああああああああ6</h3>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <div class="achievement__button-wrapper flex">
+          <button class="achievement__button button">施工事例一覧</button>
         </div>
-        <button class="achievement__button button">施工事例一覧</button>
       </div>
     </div>
     <div class="information flex">
@@ -169,7 +176,7 @@
   <footer class="footer flex">
     <small>&copy; 2021 株式会社コズミック</small>
   </footer>
+  <script src="js/slick.min.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/jquery-3.6.0.min.js"></script>
 </body>
 </html>
