@@ -78,15 +78,21 @@ $z: 1,2,3,4,5,6,7,8,9,10;
 
 // header
 .header{
-  justify-content: center;
   z-index: index($z,9);
   color: white;
   position: relative;
   transition: background-color 0.2s;
+  padding-top: 20px;
   &__logo{
-    width: 100%;
     height: 100%;
-    background-color: #ef4565;
+    &-link{
+      height: 70px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__name{
+    font-size: 24px;
   }
 
 }
@@ -95,24 +101,25 @@ $z: 1,2,3,4,5,6,7,8,9,10;
 
 // topnav
 .topnav{
-    padding: 0 40px;
-    justify-content: space-between;
-    height: 60px;
-    line-height: 60px;
-    width: 100%;
-    z-index: index($z,10);
-    position: fixed;
-    transition: background-color 0.2s;
-    &__after{
-      background-color: #094067;
-      opacity: 0.9;
+  padding: 0 40px;
+  justify-content: space-between;
+  margin: 0 auto;
+  height: 60px;
+  line-height: 60px;
+  width: 100%;
+  z-index: index($z,10);
+  position: fixed;
+  transition: background-color 0.2s;
+  &__after{
+    background-color: #094067;
+    opacity: 0.9;
+  }
+  &__list{
+    &-link{
+      color: #fffffe;
+      font-weight: bold;
     }
-    &__list{
-      &-link{
-        color: #fffffe;
-        font-weight: bold;
-      }
-    }
+  }
 }
 
 
@@ -120,7 +127,7 @@ $z: 1,2,3,4,5,6,7,8,9,10;
 
 .firstview{
   align-items: center;
-  background: url(./images/firstview.jpg) no-repeat center;
+  background: url(../images/firstview.jpg) no-repeat center;
   min-height: 100vh;
   background-size: cover;
   position: absolute;
@@ -180,7 +187,7 @@ $z: 1,2,3,4,5,6,7,8,9,10;
   &__img{
     width: 50%;
     height: 65%;
-    background: url(./images/greeting.jpg) no-repeat center;
+    background: url(../images/greeting.jpg) no-repeat center;
     background-size: cover;
     position: absolute;
     top: 10%;
@@ -199,6 +206,7 @@ $z: 1,2,3,4,5,6,7,8,9,10;
 }
 
 .service{
+  align-items: center;
   justify-content: center;
   background-color: #d8eefe;
   padding: 70px 0;
@@ -210,9 +218,13 @@ $z: 1,2,3,4,5,6,7,8,9,10;
     color: #094067;
   }
   &__imgs{
-    background-color: #094067;
-    width: 60%;
+    margin: 50px 0;
+    width: 100%;
     height: 300px;
+    justify-content: center;
+    &-img{
+      width: 33%;
+    }
   }
   &__contents{
     width: 100%;
